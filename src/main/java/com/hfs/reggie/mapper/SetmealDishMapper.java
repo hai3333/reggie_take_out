@@ -1,0 +1,12 @@
+package com.hfs.reggie.mapper;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.hfs.reggie.dto.SetmealDto;
+import com.hfs.reggie.entity.SetmealDish;
+import org.apache.ibatis.annotations.Mapper;
+
+@Mapper
+public interface SetmealDishMapper extends BaseMapper<SetmealDish> {
+
+
+}

@@ -2,6 +2,7 @@
 function categoryListApi() {
     return $axios({
       'url': '/category/list',
+
       'method': 'get',
     })
   }
@@ -28,6 +29,7 @@ function setmealListApi(data) {
 function cartListApi(data) {
     return $axios({
         'url': '/shoppingCart/list',
+        // 'url':'/front/cartData.json',
         'method': 'get',
         params:{...data}
     })
@@ -46,6 +48,7 @@ function  addCartApi(data){
 function  updateCartApi(data){
     return $axios({
         'url': '/shoppingCart/sub',
+
         'method': 'post',
         data
       })

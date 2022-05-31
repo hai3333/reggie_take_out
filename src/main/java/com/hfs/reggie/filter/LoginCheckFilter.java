@@ -31,7 +31,10 @@ public class LoginCheckFilter implements Filter {
                 "/employee/logout",
                 "/backend/**",
                 "/front/**",
-                "/common/**"
+                "/common/**",
+                "/user/sendMsg",
+                "/user/login"
+
 
         } ;
         //判断是否需要处理
@@ -53,14 +56,31 @@ public class LoginCheckFilter implements Filter {
             filterChain.doFilter(request,response);
             return;
         }
+        //手机用户
+        if(request.getSession().getAttribute("user")!=null){
+            log.info("登录");
+
+
+            Long userId=(Long)request.getSession().getAttribute("user");
+            BaseContext.setCurrentId(userId);
+
+
+            filterChain.doFilter(request,response);
+            return;
+        }
         log.info("用户未登录");
         //通过客户端像浏览器响应数据
         response.getWriter().write(JSON.toJSONString(R.error("NOTLOGIN")));
 
 
+
+
      return;
 
+
     }
+
+
 
         /*
         * 进行路径匹配
