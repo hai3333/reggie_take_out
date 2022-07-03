@@ -115,7 +115,7 @@ public class EmployeeController {
             log.info(employee.toString());
 
             long id = Thread.currentThread().getId();
-            log.info("线程为id为{}",id);
+            log. info("线程为id为{}",id);
 
             Long empId = (Long) request.getSession().getAttribute("employee");
             employee.setUpdateTime(LocalDateTime.now());
