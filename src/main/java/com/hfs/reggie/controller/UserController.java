@@ -32,12 +32,13 @@ public class UserController {
             user1=new User();
             user1.setPhone(phone);
             user1.setStatus(1);
-            userService.save(user1);
+            userService.save(user);
 
         }
         session.setAttribute("user",user1.getId());
         return R.success(user1);
     }
+    asjkdhaiosbfcadsficsdafhsdiofhdosfhinvdsFIHOSdhijo
 
 
 
