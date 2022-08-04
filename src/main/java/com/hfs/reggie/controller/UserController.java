@@ -36,9 +36,10 @@ public class UserController {
 
         }
         session.setAttribute("user",user1.getId());
-        return R.success(user1);
+//        return R.success(user1);
+        return null;
     }
-    asjkdhaiosbfcadsficsdafhsdiofhdosfhinvdsFIHOSdhijo
+//    asjkdhaiosbfcadsficsdafhsdiofhdosfhinvdsFIHOSdhijo
 
 
 
